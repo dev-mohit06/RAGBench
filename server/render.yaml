@@ -1,9 +1,7 @@
 services:
   - type: web
-    name: ragbench-api
-    runtime: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "uvicorn main:app --host 0.0.0.0 --port 10000"
-    envVars:
-      - key: PYTHONPATH
-        value: .
+    name: your-app-name
+    env: python
+    buildCommand: pip install -r server/requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    workDir: server  # This tells Render to run from the server directory
