@@ -1,4 +1,4 @@
-from ..BaseRag import BaseRAG
+from RAGs.BaseRag import BaseRAG
 
 class SimpleRAGSystem(BaseRAG):
     """

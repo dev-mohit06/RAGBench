@@ -1,8 +1,8 @@
-from .BaseRag import BaseRAG
+from RAGs.BaseRag import BaseRAG
 
-from .implementations._simpleRAG import SimpleRAGSystem
-from .implementations._rerankingRAG import RerankingRAGSystem
-from .implementations._HyDERAG import HyDERAGSystem
+from RAGs.implementations._simpleRAG import SimpleRAGSystem
+from RAGs.implementations._rerankingRAG import RerankingRAGSystem
+from RAGs.implementations._HyDERAG import HyDERAGSystem
 
 class RAGSystemFactory:
     """Factory class to create different types of RAG systems."""

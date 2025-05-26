@@ -9,9 +9,8 @@ from fastapi import HTTPException, UploadFile
 from models.rag_models import RAGSystemInterface, DocumentProcessor
 from models.request_models import QueryRequest
 from models.response_models import QueryResponse, ComparisonResponse, DocumentStatus, HealthResponse, ArchitectureInfo
-import sys
 import os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from RAGs.RAGFactory import RAGSystemFactory
 
 logger = logging.getLogger(__name__)

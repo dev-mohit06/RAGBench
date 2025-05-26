@@ -1,4 +1,4 @@
-from ..BaseRag import BaseRAG
+from RAGs.BaseRag import BaseRAG
 from langchain.prompts import PromptTemplate
 from typing import List,Dict,Any
 

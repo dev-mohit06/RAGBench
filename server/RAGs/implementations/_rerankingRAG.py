@@ -1,4 +1,4 @@
-from ..BaseRag import BaseRAG
+from RAGs.BaseRag import BaseRAG
 from typing import List,Dict,Any
 import numpy as np
 
