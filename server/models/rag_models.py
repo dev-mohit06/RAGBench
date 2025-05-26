@@ -1,7 +1,7 @@
 from typing import Dict, Any, List
 from abc import ABC, abstractmethod
 
-class RAGSystemInterface(ABC):
+class ragsystemInterface(ABC):
     """Interface for RAG systems"""
     
     @abstractmethod

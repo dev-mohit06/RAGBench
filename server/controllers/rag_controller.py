@@ -2,7 +2,7 @@
 from fastapi import APIRouter, File, UploadFile, BackgroundTasks
 from typing import List
 
-from services.rag_service import RAGService
+from services.rag_service import ragservice
 from models.request_models import QueryRequest
 from models.response_models import (
     QueryResponse, ComparisonResponse, DocumentStatus, 
@@ -12,7 +12,7 @@ from models.response_models import (
 class RAGController:
     """Controller for handling RAG-related HTTP requests"""
     
-    def __init__(self, rag_service: RAGService):
+    def __init__(self, rag_service: ragservice):
         self.rag_service = rag_service
         self.router = APIRouter()
         self._setup_routes()

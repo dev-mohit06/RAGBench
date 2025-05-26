@@ -6,20 +6,20 @@ import tempfile
 from typing import Dict, Any, List
 from fastapi import HTTPException, UploadFile
 
-from models.rag_models import RAGSystemInterface, DocumentProcessor
+from models.rag_models import ragsystemInterface, DocumentProcessor
 from models.request_models import QueryRequest
 from models.response_models import QueryResponse, ComparisonResponse, DocumentStatus, HealthResponse, ArchitectureInfo
 import os
 
-from RAGs.RAGFactory import RAGSystemFactory
+from rags.RAGFactory import ragsystemFactory
 
 logger = logging.getLogger(__name__)
 
-class RAGService:
+class ragservice:
     """Service class containing business logic for RAG operations"""
     
     def __init__(self):
-        self.rag_systems: Dict[str, RAGSystemInterface] = {}
+        self.rag_systems: Dict[str, ragsystemInterface] = {}
         self.document_processor = DocumentProcessor()
         self.available_architectures = ["simple", "reranking", "hyde"]
         self.architecture_descriptions = {
@@ -33,7 +33,7 @@ class RAGService:
         try:
             for arch in self.available_architectures:
                 logger.info(f"Initializing {arch} RAG system...")
-                self.rag_systems[arch] = RAGSystemFactory.create_rag_system(
+                self.rag_systems[arch] = ragsystemFactory.create_rag_system(
                     rag_type=arch,
                     # Add your initialization parameters here
                     # vector_store_path=os.getenv("VECTOR_STORE_PATH", "./vector_store"),

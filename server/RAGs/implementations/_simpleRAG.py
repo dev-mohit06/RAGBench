@@ -1,6 +1,6 @@
-from RAGs.BaseRag import BaseRAG
+from rags.BaseRag import BaseRAG
 
-class SimpleRAGSystem(BaseRAG):
+class Simpleragsystem(BaseRAG):
     """
     Simple RAG implementation using basic retrieval and generation.
     

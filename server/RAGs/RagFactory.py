@@ -1,10 +1,10 @@
-from RAGs.BaseRag import BaseRAG
+from rags.BaseRag import BaseRAG
 
-from RAGs.implementations._simpleRAG import SimpleRAGSystem
-from RAGs.implementations._rerankingRAG import RerankingRAGSystem
-from RAGs.implementations._HyDERAG import HyDERAGSystem
+from rags.implementations._simpleRAG import Simpleragsystem
+from rags.implementations._rerankingRAG import Rerankingragsystem
+from rags.implementations._HyDERAG import HyDEragsystem
 
-class RAGSystemFactory:
+class ragsystemFactory:
     """Factory class to create different types of RAG systems."""
     
     @staticmethod
@@ -25,10 +25,10 @@ class RAGSystemFactory:
         rag_type = rag_type.lower()
         
         if rag_type == "simple":
-            return SimpleRAGSystem(**kwargs)
+            return Simpleragsystem(**kwargs)
         elif rag_type == "reranking":
-            return RerankingRAGSystem(**kwargs)
+            return Rerankingragsystem(**kwargs)
         elif rag_type == "hyde":
-            return HyDERAGSystem(**kwargs)
+            return HyDEragsystem(**kwargs)
         else:
             raise ValueError(f"Unknown RAG type: {rag_type}. Choose from: simple, reranking, hyde")

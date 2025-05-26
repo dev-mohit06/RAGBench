@@ -23,8 +23,8 @@ The backend exposes REST endpoints for document upload, processing, querying, an
 ├── main.py                # FastAPI app entrypoint
 ├── controllers/           # API route controllers
 ├── models/                # Pydantic models for requests/responses
-├── services/              # Business logic (RAGService)
-├── RAGs/                  # RAG architecture implementations & factory
+├── services/              # Business logic (ragservice)
+├── rags/                  # RAG architecture implementations & factory
 ├── .env                   # Environment variables (API keys, etc.)
 ```
 
@@ -100,7 +100,7 @@ POST /api/v1/query
 ## 🧪 Development
 
 - All business logic is in [`services/rag_service.py`](services/rag_service.py).
-- RAG architectures are implemented in [`RAGs/implementations/`](RAGs/implementations/).
+- RAG architectures are implemented in [`rags/implementations/`](rags/implementations/).
 - API models are in [`models/`](models/).
 
 ---

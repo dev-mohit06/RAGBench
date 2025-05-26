@@ -1,5 +1,5 @@
 # controllers/controller_factory.py
-from services.rag_service import RAGService
+from services.rag_service import ragservice
 from controllers.rag_controller import RAGController
 
 class ControllerFactory:
@@ -8,5 +8,5 @@ class ControllerFactory:
     @staticmethod
     def create_rag_controller() -> RAGController:
         """Create RAG controller with all dependencies"""
-        rag_service = RAGService()
+        rag_service = ragservice()
         return RAGController(rag_service)
