@@ -90,8 +90,8 @@ Update the .env.local file in the frontend with your backend API URL.
 
 ## 🔗 Live Demo
 
-- 🧠 **Frontend:** [https://ragbench.vercel.app](https://ragbench.vercel.app)
-- 🚀 **Backend:** [https://ragbench-api.render.com](https://ragbench-api.render.com)
+- 🧠 **Frontend:** [https://ragbench.vercel.app](https://rag-bench.vercel.app)
+- 🚀 **Backend:** [https://ragbench-api.render.com](https://ragbench-4808.onrender.com)
 
 ---
 
