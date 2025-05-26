@@ -11,7 +11,7 @@ from models.request_models import QueryRequest
 from models.response_models import QueryResponse, ComparisonResponse, DocumentStatus, HealthResponse, ArchitectureInfo
 import os
 
-from RAGs.RAGFactory import RAGsystemFactory
+from services.RAGFactory import RAGsystemFactory
 
 logger = logging.getLogger(__name__)
 
