@@ -326,6 +326,7 @@ class RAGService:
         """Clear all documents from RAG systems"""
         try:
             for arch_name, rag_system in self.rag_systems.items():
+                rag_system.vector_store.delete_collection()
                 if hasattr(rag_system, 'clear_documents'):
                     rag_system.clear_documents()
                 elif hasattr(rag_system, 'vector_store'):
