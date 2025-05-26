@@ -1,4 +1,4 @@
-from rags.BaseRag import BaseRAG
+from RAGs.BaseRag import BaseRAG
 from typing import List,Dict,Any
 import numpy as np
 
@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-class Rerankingragsystem(BaseRAG):
+class RerankingRAGsystem(BaseRAG):
     """
     RAG system with semantic reranking.
     

@@ -6,7 +6,7 @@ import logging
 import uvicorn
 
 from controllers.controller_factory import ControllerFactory
-from services.rag_service import ragservice
+from services.rag_service import RAGservice
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -24,7 +24,7 @@ class RAGApplication:
             description="API for comparing different RAG architectures",
             version="1.0.0"
         )
-        self.rag_service = ragservice()
+        self.rag_service = RAGservice()
         self._setup_middleware()
         self._setup_controllers()
         self._setup_events()

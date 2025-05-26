@@ -1,4 +1,4 @@
-from rags.BaseRag import BaseRAG
+from RAGs.BaseRag import BaseRAG
 from langchain.prompts import PromptTemplate
 from typing import List,Dict,Any
 
@@ -6,7 +6,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-class HyDEragsystem(BaseRAG):
+class HyDERAGsystem(BaseRAG):
     """
     RAG system using Hypothetical Document Embeddings (HyDE).
     
